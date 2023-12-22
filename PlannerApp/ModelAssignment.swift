@@ -7,12 +7,13 @@
 
 import Foundation
 
-class Assignemnt {
+class Assignment {
     var nameAssign : String
     var typeAssign : String
     var timeAssign : Date
     var className : String
     var reminder : Bool
+    
     init(nameAssign: String, typeAssign: String, timeAssign: Date, className: String, reminder: Bool) {
         self.nameAssign = nameAssign
         self.typeAssign = typeAssign
