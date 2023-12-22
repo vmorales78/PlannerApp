@@ -11,6 +11,7 @@
 		48A88A162B2234BE00C02351 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A88A152B2234BE00C02351 /* ContentView.swift */; };
 		48A88A182B2234C100C02351 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48A88A172B2234C100C02351 /* Assets.xcassets */; };
 		48A88A1C2B2234C200C02351 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48A88A1B2B2234C200C02351 /* Preview Assets.xcassets */; };
+		AEAFEA3B2B35DE3A00478B36 /* ModelAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAFEA3A2B35DE3A00478B36 /* ModelAssignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		48A88A172B2234C100C02351 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48A88A192B2234C100C02351 /* PlannerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlannerApp.entitlements; sourceTree = "<group>"; };
 		48A88A1B2B2234C200C02351 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AEAFEA3A2B35DE3A00478B36 /* ModelAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAssignment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				48A88A132B2234BE00C02351 /* PlannerAppApp.swift */,
 				48A88A152B2234BE00C02351 /* ContentView.swift */,
+				AEAFEA3A2B35DE3A00478B36 /* ModelAssignment.swift */,
 				48A88A172B2234C100C02351 /* Assets.xcassets */,
 				48A88A192B2234C100C02351 /* PlannerApp.entitlements */,
 				48A88A1A2B2234C200C02351 /* Preview Content */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48A88A162B2234BE00C02351 /* ContentView.swift in Sources */,
+				AEAFEA3B2B35DE3A00478B36 /* ModelAssignment.swift in Sources */,
 				48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
