@@ -6,3 +6,20 @@
 //
 
 import Foundation
+
+
+class AssignmentViewmodel: ObservableObject {
+    @Published var assignments: [Assignment] = []
+    
+    func AddAssignment() {
+        
+    }
+    
+    func EditAssignment() {
+        
+    }
+    
+    func SaveToSwiftdata() {
+        
+    }
+}
