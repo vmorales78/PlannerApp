@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import SwiftData
 
+@Model
 class Assignment {
     var nameAssign : String
     var typeAssign : String
