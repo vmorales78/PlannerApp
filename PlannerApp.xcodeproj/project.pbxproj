@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */; };
 		48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A88A132B2234BE00C02351 /* PlannerAppApp.swift */; };
 		48A88A162B2234BE00C02351 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A88A152B2234BE00C02351 /* ContentView.swift */; };
 		48A88A182B2234C100C02351 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48A88A172B2234C100C02351 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentViewmodel.swift; sourceTree = "<group>"; };
 		48A88A102B2234BE00C02351 /* PlannerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlannerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A88A132B2234BE00C02351 /* PlannerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerAppApp.swift; sourceTree = "<group>"; };
 		48A88A152B2234BE00C02351 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				48A88A132B2234BE00C02351 /* PlannerAppApp.swift */,
+				26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */,
 				48A88A152B2234BE00C02351 /* ContentView.swift */,
 				AEAFEA3A2B35DE3A00478B36 /* ModelAssignment.swift */,
 				48A88A172B2234C100C02351 /* Assets.xcassets */,
@@ -100,7 +103,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					48A88A0F2B2234BE00C02351 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48A88A162B2234BE00C02351 /* ContentView.swift in Sources */,
+				26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */,
 				AEAFEA3B2B35DE3A00478B36 /* ModelAssignment.swift in Sources */,
 				48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */,
 			);
@@ -185,6 +189,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -246,6 +251,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -273,6 +279,7 @@
 				CODE_SIGN_ENTITLEMENTS = PlannerApp/PlannerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"PlannerApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -309,6 +316,7 @@
 				CODE_SIGN_ENTITLEMENTS = PlannerApp/PlannerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"PlannerApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
