@@ -15,22 +15,31 @@ struct ContentView: View {
     @Query var assignment: [AddAssignment]
     @State var enteredAssignment: String = ""
     var body: some View {
-        Button("Add assignment") {
-            showingAlert = true
+        NavigationStack {
+            Text("").padding()
+                .toolbar(content: {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Add assignment") {
+                            showingAlert = true
+                        }
+                        .alert("Add assignment", isPresented: $showingAlert) {
+                            VStack {
+                                TextField ("Enter Assignment Name", text: $enteredAssignment)
+                                TextField ("Enter Assignment Type", text: $enteredAssignment)
+                                TextField ("Enter Class Name", text: $enteredAssignment)
+                            }
+                            Button("Add") {
+                                showingAlert = true
+                                let assignment = AddAssignment(name: enteredAssignment)
+                                context.insert(assignment)
+                                enteredAssignment = ""
+                            }
+                        }
+                    }
+                })
+            
         }
-        .alert("Add assignment", isPresented: $showingAlert) {
-            VStack {
-                TextField ("Enter Assignment Name", text: $enteredAssignment)
-                TextField ("Enter Assignment Type", text: $enteredAssignment)
-                TextField ("Enter Class Name", text: $enteredAssignment)
-            }
-            Button("Add") {
-                showingAlert = true
-                let assignment = AddAssignment(name: enteredAssignment)
-                context.insert(assignment)
-                enteredAssignment = ""
-            }
-        }
+        
     }
 }
 
