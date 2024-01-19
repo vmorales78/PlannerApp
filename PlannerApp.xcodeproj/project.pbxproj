@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		156D89962B5ADE88009768BB /* AddAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156D89952B5ADE88009768BB /* AddAssignment.swift */; };
 		26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */; };
 		48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A88A132B2234BE00C02351 /* PlannerAppApp.swift */; };
 		48A88A162B2234BE00C02351 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A88A152B2234BE00C02351 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		156D89952B5ADE88009768BB /* AddAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssignment.swift; sourceTree = "<group>"; };
 		26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentViewmodel.swift; sourceTree = "<group>"; };
 		48A88A102B2234BE00C02351 /* PlannerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlannerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A88A132B2234BE00C02351 /* PlannerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerAppApp.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				48A88A132B2234BE00C02351 /* PlannerAppApp.swift */,
 				26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */,
 				48A88A152B2234BE00C02351 /* ContentView.swift */,
+				156D89952B5ADE88009768BB /* AddAssignment.swift */,
 				AEAFEA3A2B35DE3A00478B36 /* ModelAssignment.swift */,
 				48A88A172B2234C100C02351 /* Assets.xcassets */,
 				48A88A192B2234C100C02351 /* PlannerApp.entitlements */,
@@ -147,6 +150,7 @@
 			files = (
 				48A88A162B2234BE00C02351 /* ContentView.swift in Sources */,
 				26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */,
+				156D89962B5ADE88009768BB /* AddAssignment.swift in Sources */,
 				AEAFEA3B2B35DE3A00478B36 /* ModelAssignment.swift in Sources */,
 				48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */,
 			);

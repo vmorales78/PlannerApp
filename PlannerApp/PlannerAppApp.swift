@@ -16,6 +16,7 @@ struct PlannerAppApp: App {
             ContentView()
         }
         .modelContainer(container)
+        .modelContainer(for: Assignment.self)
     }
     
     init() {
