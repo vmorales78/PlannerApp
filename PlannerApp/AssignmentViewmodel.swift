@@ -6,10 +6,10 @@
 //
 
 import Foundation
-
+import SwiftUI
+import SwiftData
 
 class AssignmentViewmodel: ObservableObject {
-    @Published var assignments: [Assignment] = []
     
     func AddAssignment() {
         

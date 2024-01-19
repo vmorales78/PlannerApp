@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     @State var viewModel = AssignmentViewmodel()
+    @Environment(\.modelContext) private var context
+    @Query var savedAssignments: [Assignment]
     
     var body: some View {
         VStack {
