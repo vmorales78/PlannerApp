@@ -9,14 +9,19 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State var viewModel = AssignmentViewmodel()
+//    @State var viewModel = AssignmentViewmodel()
     @State private var showingAlert = false
     @Environment(\.modelContext) var context
-    @Query var assignment: [AddAssignment]
-    @State var enteredAssignment: String = ""
+    @Query var assignments: [Assignment]
+    @State var enteredName: String = ""
+    @State var enteredClass: String = ""
+    @State var enteredType: String = ""
     var body: some View {
         NavigationStack {
-            Text("").padding()
+            List {
+                Text("Hi")
+            }
+                .padding()
                 .toolbar(content: {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button("Add assignment") {
@@ -24,15 +29,17 @@ struct ContentView: View {
                         }
                         .alert("Add assignment", isPresented: $showingAlert) {
                             VStack {
-                                TextField ("Enter Assignment Name", text: $enteredAssignment)
-                                TextField ("Enter Assignment Type", text: $enteredAssignment)
-                                TextField ("Enter Class Name", text: $enteredAssignment)
+                                TextField ("Enter Assignment Name", text: $enteredName)
+                                TextField ("Enter Assignment Type", text: $enteredType)
+                                TextField ("Enter Class Name", text: $enteredClass)
                             }
                             Button("Add") {
                                 showingAlert = true
-                                let assignment = AddAssignment(name: enteredAssignment)
+                                let assignment = Assignment(nameAssign: enteredName, typeAssign: enteredType, className: enteredClass)
                                 context.insert(assignment)
-                                enteredAssignment = ""
+                                enteredName = ""
+                                enteredType = ""
+                                enteredClass = ""
                             }
                         }
                     }
