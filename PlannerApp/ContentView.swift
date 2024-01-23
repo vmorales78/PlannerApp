@@ -18,8 +18,13 @@ struct ContentView: View {
     @State var enteredType: String = ""
     var body: some View {
         NavigationStack {
+            Text("Upcoming Assignments")
             List(assignments) { assignment in
-                Text(assignment.assignmentName)
+                NavigationLink {
+                    
+                } label: {
+                    AssignmentListItem(myAssignment: assignment)
+                }
             }
                 .padding()
                 .toolbar(content: {
@@ -35,7 +40,7 @@ struct ContentView: View {
                             }
                             Button("Add") {
                                 showingAlert = false
-                                let assignment = Assignment(assignmentName: enteredName, assignmentType: enteredType, className: enteredClass)
+                                let assignment = Assignment(assignmentName: enteredName, assignmentType: enteredType, assignmentClass: enteredClass)
                                 context.insert(assignment)
                                 enteredName = ""
                                 enteredType = ""
@@ -52,4 +57,18 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+struct AssignmentListItem: View {
+    let myAssignment: Assignment
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(myAssignment.assignmentName)
+                .font(.title)
+            Text(myAssignment.assignmentType)
+                .font(.title3)
+            Text(myAssignment.assignmentClass)
+                .font(.title3)
+        }
+    }
 }

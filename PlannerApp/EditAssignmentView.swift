@@ -7,7 +7,7 @@
 
 import SwiftUI
 struct EditAssignmentView: View {
-    @State var modelAssign = Assignment(assignmentName: "", assignmentType: "", className: "")
+    @State var modelAssign = Assignment(assignmentName: "", assignmentType: "", assignmentClass: "")
     @State var newName = ""
     @State var newType = ""
     @State var newClass = ""
@@ -18,7 +18,7 @@ struct EditAssignmentView: View {
             TextField("enter new type", text: $newType)
             TextField("enter new class", text: $newClass)
             Button("update") {
-                let updatedAssign = Assignment(assignmentName: newName, assignmentType: newType, className: newClass)
+                let updatedAssign = Assignment(assignmentName: newName, assignmentType: newType, assignmentClass: newClass)
             }
         }
     }

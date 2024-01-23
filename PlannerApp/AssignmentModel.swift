@@ -10,13 +10,13 @@ import SwiftData
 
 @Model
 class Assignment {
-    var assignmentName : String
-    var assignmentType : String
-    var className : String
+    var assignmentName: String
+    var assignmentType: String
+    var assignmentClass: String
     
-    init(assignmentName: String, assignmentType: String, className: String) {
+    init(assignmentName: String, assignmentType: String, assignmentClass: String) {
         self.assignmentName = assignmentName
         self.assignmentType = assignmentType
-        self.className = className
+        self.assignmentClass = assignmentClass
     }
 }
