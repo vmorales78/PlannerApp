@@ -35,7 +35,7 @@ struct ContentView: View {
                             }
                             Button("Add") {
                                 showingAlert = true
-                                let assignment = Assignment(nameAssign: enteredName, typeAssign: enteredType, className: enteredClass)
+                                let assignment = Assignment(assignmentName: enteredName, assignmentType: enteredType, className: enteredClass)
                                 context.insert(assignment)
                                 enteredName = ""
                                 enteredType = ""
