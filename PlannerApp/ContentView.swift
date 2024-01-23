@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-//    @State var viewModel = AssignmentViewmodel()
+    @State var viewModel = AssignmentViewmodel()
     @State private var showingAlert = false
     @Environment(\.modelContext) var context
     @Query var assignments: [Assignment]
@@ -18,8 +18,8 @@ struct ContentView: View {
     @State var enteredType: String = ""
     var body: some View {
         NavigationStack {
-            List {
-                Text("Hi")
+            List(assignments) { assignment in
+                Text(assignment.assignmentName)
             }
                 .padding()
                 .toolbar(content: {
@@ -34,7 +34,7 @@ struct ContentView: View {
                                 TextField ("Enter Class Name", text: $enteredClass)
                             }
                             Button("Add") {
-                                showingAlert = true
+                                showingAlert = false
                                 let assignment = Assignment(assignmentName: enteredName, assignmentType: enteredType, className: enteredClass)
                                 context.insert(assignment)
                                 enteredName = ""

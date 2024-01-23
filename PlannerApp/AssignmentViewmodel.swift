@@ -11,7 +11,7 @@ import SwiftData
 
 class AssignmentViewmodel: ObservableObject {
     
-    func AddAssignment() {
+    func AddAssignment(newName: String, newType: String, newClass: String) {
         
     }
     

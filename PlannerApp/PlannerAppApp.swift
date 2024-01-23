@@ -16,13 +16,14 @@ struct PlannerAppApp: App {
             ContentView()
         }
         .modelContainer(container)
+        .modelContainer(for: Assignment.self)
     }
     
     init() {
         do {
             container = try ModelContainer(for: Assignment.self)
         } catch {
-            fatalError("Failed to create model container")
+            fatalError("Failed to create model")
         }
     }
 }
