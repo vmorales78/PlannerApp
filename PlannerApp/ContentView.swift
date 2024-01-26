@@ -16,10 +16,13 @@ struct ContentView: View {
     @State var enteredName: String = ""
     @State var enteredClass: String = ""
     @State var enteredType: String = ""
-    var body: some View {
+        var body: some View {
         NavigationStack {
             List(assignments) { assignment in
-                Text(assignment.assignmentName)
+                HStack {
+                    Text(assignment.assignmentName)
+                    NavigationLink("edit", destination: EditAssignmentView())
+                }
             }
                 .padding()
                 .toolbar(content: {
