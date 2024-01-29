@@ -23,11 +23,11 @@ struct ContentView: View {
             Text("Upcoming Assignments")
             List {
                 ForEach(assignments, id: \.self) { assignment in
-                    NavigationLink {
-                        
-                    } label: {
+//                    NavigationLink {
+//                        
+//                    } label: {
                         AssignmentListItem(myAssignment: assignment)
-                    }
+//                    }
                 }
             }
             .padding()
