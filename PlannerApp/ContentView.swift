@@ -21,7 +21,7 @@ struct ContentView: View {
             List(assignments) { assignment in
                 HStack {
                     Text(assignment.assignmentName)
-                    NavigationLink("edit", destination: EditAssignmentView())
+//                    NavigationLink("edit", destination: EditAssignmentView())
                 }
             }
                 .padding()
