@@ -87,8 +87,8 @@ struct AssignmentListItem: View {
                 .font(.title)
             Text("\(myAssignment.assignmentType) for \(myAssignment.assignmentClass)")
                 .font(.title3)
-//            Text("Due on \(myAssignment.dueDate.formatted())")
-//                .font(.title3)
+            Text("Due \(myAssignment.dueDate.formatted())")
+                .font(.title3)
         }
     }
 }
