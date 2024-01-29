@@ -11,20 +11,22 @@ import SwiftData
 
 @main
 struct PlannerAppApp: App {
-    let container: ModelContainer
+//    let container: ModelContainer
+//        
+//    init() {
+//        do {
+//            container = try ModelContainer(for: Assignment.self)
+//        } catch {
+//            fatalError("Could not initialize ModelContainer")
+//        }
+//    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(container)
         .modelContainer(for: Assignment.self)
+        
     }
     
-    init() {
-        do {
-            container = try ModelContainer(for: Assignment.self)
-        } catch {
-            fatalError("Failed to create model")
-        }
-    }
 }
