@@ -6,20 +6,27 @@
 //
 
 import SwiftUI
+import SwiftData
 struct EditAssignmentView: View {
-//    @State var modelAssign = Assignment(assignmentName: "", assignmentType: "", assignmentClass: "")
+    @Environment(\.modelContext) var context
+    @State var modelAssign = ContentView()
+    @Query var assignments : [Assignment]
     @State var newName = ""
     @State var newType = ""
     @State var newClass = ""
-    
-    var body: some View {
+        var body: some View {
         VStack {
             TextField("enter new name", text: $newName)
             TextField("enter new type", text: $newType)
             TextField("enter new class", text: $newClass)
-            Button("update") {
-//                let updatedAssign = Assignment(assignmentName: newName, assignmentType: newType, assignmentClass: newClass)
-            }
+                Button("Add") {
+                    let assignment = Assignment(assignmentName: newName, assignmentType: newType, className: newClass)
+                    context.insert(assignment)
+                    newType = ""
+                    newName = ""
+                    newClass = ""
+                }
+            NavigationLink("back to list", destination: ContentView())
         }
     }
 }
