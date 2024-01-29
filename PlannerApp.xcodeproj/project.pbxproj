@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E1F932B62C1B2003138D7 /* CalendarView.swift */; };
 		26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */; };
 		48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A88A132B2234BE00C02351 /* PlannerAppApp.swift */; };
 		48A88A162B2234BE00C02351 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A88A152B2234BE00C02351 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		263E1F932B62C1B2003138D7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentViewmodel.swift; sourceTree = "<group>"; };
 		48A88A102B2234BE00C02351 /* PlannerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlannerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A88A132B2234BE00C02351 /* PlannerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerAppApp.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				48A88A132B2234BE00C02351 /* PlannerAppApp.swift */,
 				26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */,
 				48A88A152B2234BE00C02351 /* ContentView.swift */,
+				263E1F932B62C1B2003138D7 /* CalendarView.swift */,
 				48DFD4232B6028A8009F140E /* EditAssignmentView.swift */,
 				AEAFEA3A2B35DE3A00478B36 /* AssignmentModel.swift */,
 				48A88A172B2234C100C02351 /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 			files = (
 				48A88A162B2234BE00C02351 /* ContentView.swift in Sources */,
 				48DFD4242B6028A8009F140E /* EditAssignmentView.swift in Sources */,
+				263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */,
 				26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */,
 				AEAFEA3B2B35DE3A00478B36 /* AssignmentModel.swift in Sources */,
 				48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */,
