@@ -12,12 +12,13 @@ struct MainView: View {
         TabView {
             ContentView()
                 .tabItem {
-                    Image(systemName: "list.bullet")
+                    Label("Upcoming", systemImage: "list.bullet")
+                    
                 }
             
             CalendarView()
                 .tabItem {
-                    Image(systemName: "calendar")
+                    Label("Calendar", systemImage: "calendar")
                 }
         }
     }
