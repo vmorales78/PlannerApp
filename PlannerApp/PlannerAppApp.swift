@@ -23,7 +23,7 @@ struct PlannerAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
         .modelContainer(for: Assignment.self)
         
