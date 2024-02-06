@@ -20,8 +20,8 @@ struct EditAssignmentView: View {
             TextField("enter new type", text: $newType)
             TextField("enter new class", text: $newClass)
                 Button("Add") {
-                    let assignment = Assignment(assignmentName: newName, assignmentType: newType, className: newClass)
-                    context.insert(assignment)
+//                    let assignment = Assignment(assignmentName: newName, assignmentType: newType, className: newClass)
+//                    context.insert(assignment)
                     newType = ""
                     newName = ""
                     newClass = ""
