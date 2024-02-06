@@ -18,7 +18,11 @@ struct ContentView: View {
     @State var showSortMenu: Bool = false
     @State var enteredName: String = ""
     @State var enteredClass: String = ""
-    @State var enteredType: String = ""
+    //@State var enteredType: String = ""
+    
+    @State private var selection = "Type"
+    let options = ["Enter Assignment Type", "Homework", "Quiz", "Test"]
+    
     @State var enteredStartDate: Date = Date.now
     @State var enteredDueDate: Date = Date.now
     @State var updater: Bool = false
