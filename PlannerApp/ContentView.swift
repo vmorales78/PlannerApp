@@ -18,14 +18,12 @@ struct ContentView: View {
     @State var showSortMenu: Bool = false
     @State var enteredName: String = ""
     @State var enteredClass: String = ""
-    //@State var enteredType: String = ""
     
     @State private var selection = "Type"
     let options = ["Enter Assignment Type", "Homework", "Quiz", "Test"]
     
     @State var enteredStartDate: Date = Date.now
     @State var enteredDueDate: Date = Date.now
-    @State var updater: Bool = false
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
@@ -74,8 +72,12 @@ struct ContentView: View {
                             VStack {
                                 TextField ("Enter Assignment Name", text: $enteredName)
                                     .padding()
-                                TextField ("Enter Assignment Type", text: $enteredType)
+                                Picker("Enter Assignment Type", selection: $selection) {
+                                    ForEach(options, id: \.self) {
+                                        Text($0)
+                                    }
                                     .padding()
+                                }
                                 TextField ("Enter Class Name", text: $enteredClass)
                                     .padding()
                                 DatePicker("Start Date", selection: $enteredStartDate)
@@ -85,10 +87,10 @@ struct ContentView: View {
                             }
                             Button("Add") {
                                 showingAlert = false
-                                let assignment = Assignment(assignmentName: enteredName, assignmentType: enteredType, assignmentClass: enteredClass, startDate: enteredStartDate, dueDate: enteredDueDate)
+                                let assignment = Assignment(assignmentName: enteredName, assignmentType: selection, assignmentClass: enteredClass, startDate: enteredStartDate, dueDate: enteredDueDate)
                                 context.insert(assignment)
                                 enteredName = ""
-                                enteredType = ""
+                                selection = ""
                                 enteredClass = ""
                                 enteredStartDate = Date.now
                                 enteredDueDate = Date.now
