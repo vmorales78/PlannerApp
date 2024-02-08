@@ -16,7 +16,7 @@ struct MainView: View {
                     
                 }
             
-            CalendarView()
+            AssignmentCalendarView()
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")
                 }

@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
+import HorizonCalendar
 
-struct CalendarView: View {
+struct AssignmentCalendarView: View {
     var body: some View {
-        VStack {
-            
-        }
+        HorizonCalendar.CalendarViewRepresentable(visibleDateRange: Date.now...Date.now, monthsLayout: .horizontal, dataDependency: nil)
     }
 }
+
