@@ -15,7 +15,7 @@ class Assignment {
     var assignmentClass: String
     var startDate: Date!
     var dueDate: Date!
-    
+   
     init(assignmentName: String, assignmentType: String, assignmentClass: String, startDate: Date, dueDate: Date) {
         self.assignmentName = assignmentName
         self.assignmentType = assignmentType
