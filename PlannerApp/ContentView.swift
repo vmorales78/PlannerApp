@@ -11,17 +11,15 @@ import SwiftData
 struct ContentView: View {
     @State var viewModel = AssignmentViewmodel()
     @State private var showingAlert = false
-    @Environment(\.modelContext) var context    
+    @Environment(\.modelContext) var context
     @Query(sort: \Assignment.dueDate) var assignmentsByDate: [Assignment]
     @Query(sort: \Assignment.assignmentClass) var assignmentsByClass: [Assignment]
     @State var currentList: [Assignment] = []
     @State var showSortMenu: Bool = false
     @State var enteredName: String = ""
     @State var enteredClass: String = ""
-    
     @State private var selection = "Type"
     let options = ["Enter Assignment Type", "Homework", "Quiz", "Test"]
-    
     @State var enteredStartDate: Date = Date.now
     @State var enteredDueDate: Date = Date.now
     var body: some View {
@@ -48,14 +46,16 @@ struct ContentView: View {
                         .padding()
                     }
                 })
-                
                 List {
                     ForEach(currentList, id: \.self) { assignment in
-    //                    NavigationLink {
-    //
-    //                    } label: {
+                        HStack {
                             AssignmentListItem(myAssignment: assignment)
-    //                    }
+                            NavigationLink("") {
+                                EditAssignmentView()
+                            } .onTapGesture {
+                                context.delete(assignment)
+                            }
+                        }
                     }
                 }
                 .onAppear(perform: {
@@ -105,6 +105,7 @@ struct ContentView: View {
     }
 }
 
+
 #Preview {
     ContentView()
 }
@@ -122,3 +123,5 @@ struct AssignmentListItem: View {
         }
     }
 }
+
+
