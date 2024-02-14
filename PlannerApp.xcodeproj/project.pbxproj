@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155680432B7D1D1E007B04D6 /* NotificationReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155680422B7D1D1E007B04D6 /* NotificationReminder.swift */; };
 		263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E1F932B62C1B2003138D7 /* CalendarView.swift */; };
 		26A3413F2B6D4EFF00761428 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A3413E2B6D4EFF00761428 /* MainView.swift */; };
 		26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		155680422B7D1D1E007B04D6 /* NotificationReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReminder.swift; sourceTree = "<group>"; };
 		263E1F932B62C1B2003138D7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		26A3413E2B6D4EFF00761428 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentViewmodel.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				263E1F932B62C1B2003138D7 /* CalendarView.swift */,
 				48DFD4232B6028A8009F140E /* EditAssignmentView.swift */,
 				AEAFEA3A2B35DE3A00478B36 /* AssignmentModel.swift */,
+				155680422B7D1D1E007B04D6 /* NotificationReminder.swift */,
 				48A88A172B2234C100C02351 /* Assets.xcassets */,
 				48A88A192B2234C100C02351 /* PlannerApp.entitlements */,
 				48A88A1A2B2234C200C02351 /* Preview Content */,
@@ -156,6 +159,7 @@
 			files = (
 				48A88A162B2234BE00C02351 /* ContentView.swift in Sources */,
 				26A3413F2B6D4EFF00761428 /* MainView.swift in Sources */,
+				155680432B7D1D1E007B04D6 /* NotificationReminder.swift in Sources */,
 				48DFD4242B6028A8009F140E /* EditAssignmentView.swift in Sources */,
 				263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */,
 				26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */,
