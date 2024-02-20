@@ -11,8 +11,8 @@ import SwiftData
 
 @main
 struct PlannerAppApp: App {
-    //let container: ModelContainer
-        
+//    let container: ModelContainer
+//        
 //    init() {
 //        do {
 //            container = try ModelContainer(for: Assignment.self)
@@ -20,7 +20,7 @@ struct PlannerAppApp: App {
 //            fatalError("Could not initialize ModelContainer")
 //        }
 //    }
-    
+//    
     var body: some Scene {
         WindowGroup {
             MainView()

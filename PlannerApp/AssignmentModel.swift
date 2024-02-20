@@ -9,12 +9,12 @@ import Foundation
 import SwiftData
 
 @Model
-class Assignment {
-    var assignmentName: String
-    var assignmentType: String
-    var assignmentClass: String
-    var startDate: Date!
-    var dueDate: Date!
+class Assignment: Hashable {
+    var assignmentName: String = ""
+    var assignmentType: String = ""
+    var assignmentClass: String = ""
+    var startDate: Date! = Date.now
+    var dueDate: Date! = Date.now
    
     init(assignmentName: String, assignmentType: String, assignmentClass: String, startDate: Date, dueDate: Date) {
         self.assignmentName = assignmentName
