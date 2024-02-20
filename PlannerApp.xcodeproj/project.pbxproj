@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		155680432B7D1D1E007B04D6 /* NotificationReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155680422B7D1D1E007B04D6 /* NotificationReminder.swift */; };
+		155680442B7D21D2007B04D6 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 15B65D7B2B72958B00466A8E /* Algorithms */; };
+		155680462B7D2C20007B04D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155680452B7D2C20007B04D6 /* SceneDelegate.swift */; };
 		263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E1F932B62C1B2003138D7 /* CalendarView.swift */; };
 		26A3413F2B6D4EFF00761428 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A3413E2B6D4EFF00761428 /* MainView.swift */; };
 		26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */; };
@@ -21,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		155680422B7D1D1E007B04D6 /* NotificationReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReminder.swift; sourceTree = "<group>"; };
+		155680452B7D2C20007B04D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		263E1F932B62C1B2003138D7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		26A3413E2B6D4EFF00761428 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentViewmodel.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155680442B7D21D2007B04D6 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +76,7 @@
 				48DFD4232B6028A8009F140E /* EditAssignmentView.swift */,
 				AEAFEA3A2B35DE3A00478B36 /* AssignmentModel.swift */,
 				155680422B7D1D1E007B04D6 /* NotificationReminder.swift */,
+				155680452B7D2C20007B04D6 /* SceneDelegate.swift */,
 				48A88A172B2234C100C02351 /* Assets.xcassets */,
 				48A88A192B2234C100C02351 /* PlannerApp.entitlements */,
 				48A88A1A2B2234C200C02351 /* Preview Content */,
@@ -103,6 +108,9 @@
 			dependencies = (
 			);
 			name = PlannerApp;
+			packageProductDependencies = (
+				15B65D7B2B72958B00466A8E /* Algorithms */,
+			);
 			productName = PlannerApp;
 			productReference = 48A88A102B2234BE00C02351 /* PlannerApp.app */;
 			productType = "com.apple.product-type.application";
@@ -131,6 +139,9 @@
 				Base,
 			);
 			mainGroup = 48A88A072B2234BE00C02351;
+			packageReferences = (
+				15B65D7A2B72958B00466A8E /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = 48A88A112B2234BE00C02351 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,6 +170,7 @@
 			files = (
 				48A88A162B2234BE00C02351 /* ContentView.swift in Sources */,
 				26A3413F2B6D4EFF00761428 /* MainView.swift in Sources */,
+				155680462B7D2C20007B04D6 /* SceneDelegate.swift in Sources */,
 				155680432B7D1D1E007B04D6 /* NotificationReminder.swift in Sources */,
 				48DFD4242B6028A8009F140E /* EditAssignmentView.swift in Sources */,
 				263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */,
@@ -383,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15B65D7A2B72958B00466A8E /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15B65D7B2B72958B00466A8E /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15B65D7A2B72958B00466A8E /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48A88A082B2234BE00C02351 /* Project object */;
 }
