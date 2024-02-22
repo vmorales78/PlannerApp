@@ -19,7 +19,7 @@ struct ContentView: View {
     @State var enteredName: String = ""
     @State var enteredClass: String = ""
     @State private var selection = "Type"
-    let options = ["Enter Assignment Type", "Homework", "Quiz", "Test"]
+    let options = ["Enter Assignment Type", "Homework", "Quiz", "Test", "Classwork"]
     @State var enteredStartDate: Date = Date.now
     @State var enteredDueDate: Date = Date.now
     var body: some View {
@@ -51,9 +51,7 @@ struct ContentView: View {
                         HStack {
                             AssignmentListItem(myAssignment: assignment)
                             NavigationLink("") {
-                                EditAssignmentView()
-                            } .onTapGesture {
-                                context.delete(assignment)
+                                EditAssignmentView(oldAssignment: assignment)
                             }
                         }
                     }
@@ -68,7 +66,7 @@ struct ContentView: View {
                         Button("Add assignment") {
                             showingAlert = true
                         }
-                        .popover(isPresented: $showingAlert, content: {
+                        .sheet(isPresented: $showingAlert, content: {
                             VStack {
                                 TextField ("Enter Assignment Name", text: $enteredName)
                                     .padding()

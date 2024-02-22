@@ -11,6 +11,7 @@
 		155680442B7D21D2007B04D6 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 15B65D7B2B72958B00466A8E /* Algorithms */; };
 		155680462B7D2C20007B04D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155680452B7D2C20007B04D6 /* SceneDelegate.swift */; };
 		263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E1F932B62C1B2003138D7 /* CalendarView.swift */; };
+		268826392B7541D600CD1194 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 268826382B7541D600CD1194 /* HorizonCalendar */; };
 		26A3413F2B6D4EFF00761428 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A3413E2B6D4EFF00761428 /* MainView.swift */; };
 		26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */; };
 		48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A88A132B2234BE00C02351 /* PlannerAppApp.swift */; };
@@ -42,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				155680442B7D21D2007B04D6 /* Algorithms in Frameworks */,
+                268826392B7541D600CD1194 /* HorizonCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +110,7 @@
 			);
 			name = PlannerApp;
 			packageProductDependencies = (
-				15B65D7B2B72958B00466A8E /* Algorithms */,
+                268826382B7541D600CD1194 /* HorizonCalendar */,
 			);
 			productName = PlannerApp;
 			productReference = 48A88A102B2234BE00C02351 /* PlannerApp.app */;
@@ -140,7 +141,7 @@
 			);
 			mainGroup = 48A88A072B2234BE00C02351;
 			packageReferences = (
-				15B65D7A2B72958B00466A8E /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+                268826372B7541D600CD1194 /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
 			);
 			productRefGroup = 48A88A112B2234BE00C02351 /* Products */;
 			projectDirPath = "";
@@ -397,21 +398,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		15B65D7A2B72958B00466A8E /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-algorithms.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
+        268826372B7541D600CD1194 /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
+            isa = XCRemoteSwiftPackageReference;
+            repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
+            requirement = {
+                branch = master;
+                kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		15B65D7B2B72958B00466A8E /* Algorithms */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 15B65D7A2B72958B00466A8E /* XCRemoteSwiftPackageReference "swift-algorithms" */;
-			productName = Algorithms;
+        268826382B7541D600CD1194 /* HorizonCalendar */ = {
+            isa = XCSwiftPackageProductDependency;
+            package = 268826372B7541D600CD1194 /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
+            productName = HorizonCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

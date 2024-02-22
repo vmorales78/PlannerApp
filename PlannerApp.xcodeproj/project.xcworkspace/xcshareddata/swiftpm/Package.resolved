@@ -1,21 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "swift-algorithms",
+      "identity" : "horizoncalendar",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-algorithms.git",
+      "location" : "https://github.com/airbnb/HorizonCalendar.git",
       "state" : {
-        "revision" : "f6919dfc309e7f1b56224378b11e28bab5bccc42",
-        "version" : "1.2.0"
-      }
-    },
-    {
-      "identity" : "swift-numerics",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-numerics.git",
-      "state" : {
-        "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
-        "version" : "1.0.2"
+        "branch" : "master",
+        "revision" : "6d6d11a6b304b3ee8703906cbd3eddfd33c784de"
       }
     }
   ],
