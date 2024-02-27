@@ -70,9 +70,48 @@ struct CustomCalendarView: UIViewRepresentable {
             calendar: calendar,
             visibleDateRange: startDate...endDate,
             monthsLayout: .vertical(options: VerticalMonthsLayoutOptions()))
+        .dayItemProvider { day in
+            theDay.calendarItemModel(
+                invariantViewProperties: .init(
+                    font: UIFont.systemFont(ofSize: 18),
+                    textColor: .darkGray,
+                    backgroundColor: .clear),
+                content: .init(day: day))
+        }
     }
     
     func updateUIView(_ uiView: CalendarView, context: Context) {
 
     }
+}
+
+struct theDay: CalendarItemViewRepresentable {
+    struct InvariantViewProperties: Hashable {
+        let font: UIFont
+        let textColor: UIColor
+        let backgroundColor: UIColor
+    }
+    struct Content: Equatable {
+        let day: DayComponents
+    }
+    static func makeView(
+        withInvariantViewProperties invariantViewProperties: InvariantViewProperties)
+    -> UILabel
+    {
+        let label = UILabel()
+        
+        label.backgroundColor = invariantViewProperties.backgroundColor
+        label.font = invariantViewProperties.font
+        label.textColor = invariantViewProperties.textColor
+        
+        label.textAlignment = .center
+        label.clipsToBounds = true
+        label.layer.cornerRadius = 12
+        
+        return label
+    }
+    static func setContent(_ content: Content, on view: UILabel) {
+        view.text = "\(content.day.day)"
+    }
+    
 }
