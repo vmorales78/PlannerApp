@@ -76,6 +76,7 @@ struct CustomCalendarView: UIViewRepresentable {
             DayRangeIndicatorView.calendarItemModel(
                 invariantViewProperties: .init(),
                 content: .init(framesOfDaysToHighlight: dayRangeLayoutContext.daysAndFrames.map { $0.frame }))
+        }
         .dayItemProvider { day in
             theDay.calendarItemModel(
                 invariantViewProperties: .init(
@@ -84,8 +85,6 @@ struct CustomCalendarView: UIViewRepresentable {
                     backgroundColor: .clear),
                 content: .init(day: day))
         }
-        
-        
     }
     
     func updateUIView(_ uiView: CalendarView, context: Context) {
