@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		155680432B7D1D1E007B04D6 /* NotificationReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155680422B7D1D1E007B04D6 /* NotificationReminder.swift */; };
-		155680442B7D21D2007B04D6 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 15B65D7B2B72958B00466A8E /* Algorithms */; };
 		155680462B7D2C20007B04D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155680452B7D2C20007B04D6 /* SceneDelegate.swift */; };
-		263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E1F932B62C1B2003138D7 /* CalendarView.swift */; };
+		263E1F942B62C1B2003138D7 /* AssignmentCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E1F932B62C1B2003138D7 /* AssignmentCalendarView.swift */; };
 		268826392B7541D600CD1194 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 268826382B7541D600CD1194 /* HorizonCalendar */; };
 		26A3413F2B6D4EFF00761428 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A3413E2B6D4EFF00761428 /* MainView.swift */; };
 		26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */; };
@@ -26,7 +25,7 @@
 /* Begin PBXFileReference section */
 		155680422B7D1D1E007B04D6 /* NotificationReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReminder.swift; sourceTree = "<group>"; };
 		155680452B7D2C20007B04D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		263E1F932B62C1B2003138D7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		263E1F932B62C1B2003138D7 /* AssignmentCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCalendarView.swift; sourceTree = "<group>"; };
 		26A3413E2B6D4EFF00761428 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentViewmodel.swift; sourceTree = "<group>"; };
 		4829D80F2B87AF4400613564 /* TestCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalendar.swift; sourceTree = "<group>"; };
@@ -45,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-                268826392B7541D600CD1194 /* HorizonCalendar in Frameworks */,
+				268826392B7541D600CD1194 /* HorizonCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +75,7 @@
 				26F55C2C2B583C72006AFEA2 /* AssignmentViewmodel.swift */,
 				48A88A152B2234BE00C02351 /* ContentView.swift */,
 				4829D80F2B87AF4400613564 /* TestCalendar.swift */,
-				263E1F932B62C1B2003138D7 /* CalendarView.swift */,
+				263E1F932B62C1B2003138D7 /* AssignmentCalendarView.swift */,
 				48DFD4232B6028A8009F140E /* EditAssignmentView.swift */,
 				AEAFEA3A2B35DE3A00478B36 /* AssignmentModel.swift */,
 				155680422B7D1D1E007B04D6 /* NotificationReminder.swift */,
@@ -113,7 +112,7 @@
 			);
 			name = PlannerApp;
 			packageProductDependencies = (
-                268826382B7541D600CD1194 /* HorizonCalendar */,
+				268826382B7541D600CD1194 /* HorizonCalendar */,
 			);
 			productName = PlannerApp;
 			productReference = 48A88A102B2234BE00C02351 /* PlannerApp.app */;
@@ -144,7 +143,7 @@
 			);
 			mainGroup = 48A88A072B2234BE00C02351;
 			packageReferences = (
-                268826372B7541D600CD1194 /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
+				268826372B7541D600CD1194 /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
 			);
 			productRefGroup = 48A88A112B2234BE00C02351 /* Products */;
 			projectDirPath = "";
@@ -177,7 +176,7 @@
 				155680462B7D2C20007B04D6 /* SceneDelegate.swift in Sources */,
 				155680432B7D1D1E007B04D6 /* NotificationReminder.swift in Sources */,
 				48DFD4242B6028A8009F140E /* EditAssignmentView.swift in Sources */,
-				263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */,
+				263E1F942B62C1B2003138D7 /* AssignmentCalendarView.swift in Sources */,
 				26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */,
 				AEAFEA3B2B35DE3A00478B36 /* AssignmentModel.swift in Sources */,
 				48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */,
@@ -314,6 +313,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"PlannerApp/Preview Content\"";
+				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -351,6 +351,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"PlannerApp/Preview Content\"";
+				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -402,21 +403,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-        268826372B7541D600CD1194 /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
-            requirement = {
-                branch = master;
-                kind = branch;
+		268826372B7541D600CD1194 /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-        268826382B7541D600CD1194 /* HorizonCalendar */ = {
-            isa = XCSwiftPackageProductDependency;
-            package = 268826372B7541D600CD1194 /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
-            productName = HorizonCalendar;
+		268826382B7541D600CD1194 /* HorizonCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 268826372B7541D600CD1194 /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
+			productName = HorizonCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
