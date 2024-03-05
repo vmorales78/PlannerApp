@@ -76,6 +76,13 @@ struct CustomCalendarView: UIViewRepresentable {
             DayRangeIndicatorView.calendarItemModel(
                 invariantViewProperties: .init(),
                 content: .init(framesOfDaysToHighlight: dayRangeLayoutContext.daysAndFrames.map { $0.frame }))
+        .dayItemProvider { day in
+            theDay.calendarItemModel(
+                invariantViewProperties: .init(
+                    font: UIFont.systemFont(ofSize: 18),
+                    textColor: .darkGray,
+                    backgroundColor: .clear),
+                content: .init(day: day))
         }
         
         
