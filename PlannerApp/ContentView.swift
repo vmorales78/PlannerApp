@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State var viewModel = AssignmentViewmodel()
     @State private var showingAlert = false
     @Environment(\.modelContext) var context
     @Query(sort: \Assignment.dueDate) var assignmentsByDate: [Assignment]
