@@ -19,6 +19,9 @@ struct EditAssignmentView: View {
     let options = ["Enter Assignment Type", "Homework", "Quiz", "Test", "Classwork"]
     @Environment(\.dismiss) var dismiss
     @State var showDeleteAlert: Bool = false
+    
+    //let notify = NotificationHandler()
+    
     var body: some View {
         VStack {
             TextField("Enter Name", text: $newName)
@@ -40,6 +43,7 @@ struct EditAssignmentView: View {
                 context.insert(assignment)
                 context.delete(oldAssignment)
                 dismiss()
+                //notify.sendNotification(date: enteredDueDate, type: "time", title: "Reminder!", body: "You have something to complete!")
             }
             .padding()
             Button("Delete") {

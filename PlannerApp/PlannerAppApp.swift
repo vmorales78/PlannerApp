@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-//@main
+@main
 
 struct PlannerAppApp: App {
 //    let container: ModelContainer

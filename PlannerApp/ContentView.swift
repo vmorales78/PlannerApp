@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import UserNotifications
 
 struct ContentView: View {
     @State var viewModel = AssignmentViewmodel()
@@ -22,6 +23,7 @@ struct ContentView: View {
     let options = ["Enter Assignment Type", "Homework", "Quiz", "Test", "Classwork"]
     @State var enteredStartDate: Date = Date.now
     @State var enteredDueDate: Date = Date.now
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
@@ -31,6 +33,12 @@ struct ContentView: View {
                     Label("Sort", systemImage: "list.bullet.indent")
                 })
                 .padding()
+                
+                .onAppear {
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) { _, _ in
+                    }
+                }
+                
                 .popover(isPresented: $showSortMenu, content: {
                     VStack {
                         Button("Due Date") {
