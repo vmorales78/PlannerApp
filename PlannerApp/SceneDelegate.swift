@@ -1,10 +1,10 @@
+////
+////  SceneDelegate.swift
+////  PlannerApp
+////
+////  Created by Jia Jakubiec on 2/14/24.
+////
 //
-//  SceneDelegate.swift
-//  PlannerApp
-//
-//  Created by Jia Jakubiec on 2/14/24.
-//
-
 //import UIKit
 //
 //class SceneDelegate: UIResponder, UIWindowSceneDelegate  {
