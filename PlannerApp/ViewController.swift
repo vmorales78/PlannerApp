@@ -37,8 +37,8 @@ class ViewController: UIViewController {
         let title = "Reminder!"
         let body = "You have something in need of completion."
         let hour = 11
-        let minute = 10
-        let isDaily = true
+        let minute = 16
+        let isDaily = false
         
         let notificationCenter = UNUserNotificationCenter.current()
         

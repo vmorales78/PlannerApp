@@ -31,6 +31,7 @@
 		1587FA552B9A27BD002BB78E /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		15C99BD92B8CF16000E92310 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15C99BDB2B8CF9C200E92310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15CF10812BA4ABA100AC29BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		15E136742B87AE7D00405CAA /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		263E1F932B62C1B2003138D7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		26A3413E2B6D4EFF00761428 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		48A88A122B2234BE00C02351 /* PlannerApp */ = {
 			isa = PBXGroup;
 			children = (
+				15CF10812BA4ABA100AC29BA /* Info.plist */,
 				48A88A132B2234BE00C02351 /* PlannerAppApp.swift */,
 				48E236F12B9A30ED00FAB942 /* TestCalendar.swift */,
 				26A3413E2B6D4EFF00761428 /* MainView.swift */,
@@ -190,7 +192,6 @@
 				48DFD4242B6028A8009F140E /* EditAssignmentView.swift in Sources */,
 				48E236F22B9A30ED00FAB942 /* TestCalendar.swift in Sources */,
 				263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */,
-				26F55C2D2B583C72006AFEA2 /* AssignmentViewmodel.swift in Sources */,
 				15E136752B87AE7D00405CAA /* NotificationHandler.swift in Sources */,
 				AEAFEA3B2B35DE3A00478B36 /* AssignmentModel.swift in Sources */,
 				48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */,
@@ -330,6 +331,7 @@
 				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlannerApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -370,6 +372,7 @@
 				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlannerApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
