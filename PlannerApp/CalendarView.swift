@@ -13,7 +13,10 @@ import UIKit
 struct AssignmentCalendarView: View {
     @Query(sort: [SortDescriptor(\Assignment.assignmentClass), SortDescriptor(\Assignment.dueDate)]) var assignmentList: [Assignment]
     @State var currentClasses: [String] = []
-    @State var calendarView = CustomCalendarView(showDateRange: false)
+    @Binding var upperDate: Date
+    @Binding var lowerDate: Date
+    @State var showDateRange: Bool = false
+    @State var calendarView: CustomCalendarView
     
     var body: some View {
         VStack {
@@ -22,34 +25,37 @@ struct AssignmentCalendarView: View {
             
             Spacer()
             
-            VStack {
+            ScrollView {
                 VStack(alignment: .leading) {
                     ForEach(currentClasses, id: \.self) { className in
                         Text(className)
                             .underline()
                             .font(.title)
                             .padding()
-                        List {
-                            ForEach(assignmentList, id: \.self) { assignment in
-                                if(assignment.assignmentClass == className) {
-                                    Button {
-                                        calendarView.setDateRange(from: assignment.startDate, to: assignment.dueDate)
-                                    } label: {
-                                        Text(assignment.assignmentName + " - Due " + assignment.dueDate.formatted())
-                                            .font(.title2)
-                                    }
+                        ForEach(assignmentList, id: \.self) { assignment in
+                            if(assignment.assignmentClass == className) {
+                                Button {
+                                    upperDate = assignment.startDate
+                                    lowerDate = assignment.dueDate
+                                    showDateRange = true
+                                } label: {
+                                    Text(assignment.assignmentName + " - Due " + assignment.dueDate.formatted())
+                                        .font(.title2)
                                 }
+                                .padding()
                             }
                         }
                     }
                 }
             }
+            .defaultScrollAnchor(.top)
         }
         .onDisappear {
-            calendarView.hideDateRange()
+            showDateRange = false
         }
         .onAppear {
-            calendarView.hideDateRange()
+            calendarView = CustomCalendarView(lowerDate: $lowerDate, upperDate: $upperDate, showDateRange: $showDateRange)
+            showDateRange = false
             for assignment in assignmentList {
                 if(!currentClasses.contains(assignment.assignmentClass)) {
                     currentClasses.append(assignment.assignmentClass)
@@ -59,11 +65,10 @@ struct AssignmentCalendarView: View {
     }
 }
 
-//Below is mostly copied from HorizonCalendar github
 struct CustomCalendarView: UIViewRepresentable {
-    @State var lowerDate: Date = Date.now
-    @State var upperDate: Date = Date.now
-    @State var showDateRange: Bool
+    @Binding var lowerDate: Date
+    @Binding var upperDate: Date
+    @Binding var showDateRange: Bool
     
     typealias UIViewType = CalendarView
     @State var selectedDay: DayComponents?
@@ -82,17 +87,6 @@ struct CustomCalendarView: UIViewRepresentable {
         
         return calendarView
         
-    }
-
-    
-    func hideDateRange() {
-        showDateRange = false
-    }
-    
-    func setDateRange(from: Date, to: Date) {
-        lowerDate = from
-        upperDate = to
-        showDateRange = true
     }
     
     private func makeContent() -> CalendarViewContent {
@@ -197,8 +191,7 @@ extension DayRangeIndicatorView: CalendarItemViewRepresentable {
     }
     
     static func makeView(
-        withInvariantViewProperties invariantViewProperties: InvariantViewProperties)
-    -> DayRangeIndicatorView
+        withInvariantViewProperties invariantViewProperties: InvariantViewProperties) -> DayRangeIndicatorView
     {
         DayRangeIndicatorView(color: UIColor(Color.accentColor))
     }
