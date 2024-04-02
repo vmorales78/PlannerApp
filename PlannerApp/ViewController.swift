@@ -9,9 +9,32 @@ import UIKit
 import UserNotifications
 
 class ViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkForPermission()
+        DispatchQueue.main.asyncAfter(deadline: .now()+4) {
+            self.schedule()
+        }
+    }
+    
+    func schedule() {
+        var content = UNMutableNotificationContent()
+        content.title = "Notification"
+        content.body = "Check assignments"
+        content.interruptionLevel = .timeSensitive
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "time_sensitive", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print(error)
+            } else {
+                print("Success")
+            }
+        }
     }
     func checkForPermission() {
         let notificationCenter = UNUserNotificationCenter.current()
