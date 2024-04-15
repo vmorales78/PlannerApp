@@ -10,6 +10,7 @@
 		1587FA562B9A27BD002BB78E /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1587FA552B9A27BD002BB78E /* NotificationsViewController.swift */; };
 		15C99BDA2B8CF16100E92310 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C99BD92B8CF16000E92310 /* ViewController.swift */; };
 		263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E1F932B62C1B2003138D7 /* CalendarView.swift */; };
+		264509662BBC64ED00F29EE3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264509652BBC64ED00F29EE3 /* SettingsView.swift */; };
 		268826392B7541D600CD1194 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 268826382B7541D600CD1194 /* HorizonCalendar */; };
 		26A3413F2B6D4EFF00761428 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A3413E2B6D4EFF00761428 /* MainView.swift */; };
 		48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A88A132B2234BE00C02351 /* PlannerAppApp.swift */; };
@@ -26,6 +27,7 @@
 		15C99BD92B8CF16000E92310 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15CF10812BA4ABA100AC29BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		263E1F932B62C1B2003138D7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		264509652BBC64ED00F29EE3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		26A3413E2B6D4EFF00761428 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		48A88A102B2234BE00C02351 /* PlannerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlannerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A88A132B2234BE00C02351 /* PlannerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerAppApp.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				48A88A132B2234BE00C02351 /* PlannerAppApp.swift */,
 				48E236F12B9A30ED00FAB942 /* TestCalendar.swift */,
 				26A3413E2B6D4EFF00761428 /* MainView.swift */,
+				264509652BBC64ED00F29EE3 /* SettingsView.swift */,
 				48A88A152B2234BE00C02351 /* ContentView.swift */,
 				263E1F932B62C1B2003138D7 /* CalendarView.swift */,
 				48DFD4232B6028A8009F140E /* EditAssignmentView.swift */,
@@ -174,6 +177,7 @@
 				26A3413F2B6D4EFF00761428 /* MainView.swift in Sources */,
 				1587FA562B9A27BD002BB78E /* NotificationsViewController.swift in Sources */,
 				15C99BDA2B8CF16100E92310 /* ViewController.swift in Sources */,
+				264509662BBC64ED00F29EE3 /* SettingsView.swift in Sources */,
 				48DFD4242B6028A8009F140E /* EditAssignmentView.swift in Sources */,
 				48E236F22B9A30ED00FAB942 /* TestCalendar.swift in Sources */,
 				263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */,

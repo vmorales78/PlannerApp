@@ -26,6 +26,12 @@ struct MainView: View {
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")
                 }
+            
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                    
+                }
         }
         
 //  ADDS EXAMPLE DATA TO ASSIGNMENTS ARRAY - UNCOMMENT IF THE ARRAY NEEDS STUFF IN IT FOR TESTING
