@@ -18,24 +18,6 @@ class ViewController: UIViewController {
         }
     }
     
-    func schedule() {
-        var content = UNMutableNotificationContent()
-        content.title = "Notification"
-        content.body = "Check assignments"
-        content.interruptionLevel = .timeSensitive
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: true)
-        
-        let request = UNNotificationRequest(identifier: "time_sensitive", content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print(error)
-            } else {
-                print("Success")
-            }
-        }
-    }
     func checkForPermission() {
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.getNotificationSettings { settings in
@@ -55,12 +37,32 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func schedule() {
+        let content = UNMutableNotificationContent()
+        content.title = "Notification"
+        content.body = "Check assignments"
+        content.interruptionLevel = .timeSensitive
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "time_sensitive", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print(error)
+            } else {
+                print("Success")
+            }
+        }
+    }
+    
     func dispatchNotification() {
         let identifier = "my-notification"
         let title = "Reminder!"
         let body = "You have something in need of completion."
-        let hour = 14
-        let minute = 25
+        let hour = 10
+        let minute = 56
         let isDaily = false
         
         let notificationCenter = UNUserNotificationCenter.current()

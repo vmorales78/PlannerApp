@@ -7,12 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		155680432B7D1D1E007B04D6 /* NotificationReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155680422B7D1D1E007B04D6 /* NotificationReminder.swift */; };
-		155680462B7D2C20007B04D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155680452B7D2C20007B04D6 /* SceneDelegate.swift */; };
 		1587FA562B9A27BD002BB78E /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1587FA552B9A27BD002BB78E /* NotificationsViewController.swift */; };
 		15C99BDA2B8CF16100E92310 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C99BD92B8CF16000E92310 /* ViewController.swift */; };
-		15C99BDC2B8CF9C200E92310 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C99BDB2B8CF9C200E92310 /* AppDelegate.swift */; };
-		15E136752B87AE7D00405CAA /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E136742B87AE7D00405CAA /* NotificationHandler.swift */; };
 		263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E1F932B62C1B2003138D7 /* CalendarView.swift */; };
 		264509662BBC64ED00F29EE3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264509652BBC64ED00F29EE3 /* SettingsView.swift */; };
 		268826392B7541D600CD1194 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 268826382B7541D600CD1194 /* HorizonCalendar */; };
@@ -27,13 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		155680422B7D1D1E007B04D6 /* NotificationReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReminder.swift; sourceTree = "<group>"; };
-		155680452B7D2C20007B04D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1587FA552B9A27BD002BB78E /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		15C99BD92B8CF16000E92310 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		15C99BDB2B8CF9C200E92310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15CF10812BA4ABA100AC29BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		15E136742B87AE7D00405CAA /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		263E1F932B62C1B2003138D7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		264509652BBC64ED00F29EE3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		26A3413E2B6D4EFF00761428 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -88,12 +80,8 @@
 				263E1F932B62C1B2003138D7 /* CalendarView.swift */,
 				48DFD4232B6028A8009F140E /* EditAssignmentView.swift */,
 				AEAFEA3A2B35DE3A00478B36 /* AssignmentModel.swift */,
-				155680422B7D1D1E007B04D6 /* NotificationReminder.swift */,
-				15E136742B87AE7D00405CAA /* NotificationHandler.swift */,
 				15C99BD92B8CF16000E92310 /* ViewController.swift */,
 				1587FA552B9A27BD002BB78E /* NotificationsViewController.swift */,
-				15C99BDB2B8CF9C200E92310 /* AppDelegate.swift */,
-				155680452B7D2C20007B04D6 /* SceneDelegate.swift */,
 				48A88A172B2234C100C02351 /* Assets.xcassets */,
 				48A88A192B2234C100C02351 /* PlannerApp.entitlements */,
 				48A88A1A2B2234C200C02351 /* Preview Content */,
@@ -185,18 +173,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15C99BDC2B8CF9C200E92310 /* AppDelegate.swift in Sources */,
 				48A88A162B2234BE00C02351 /* ContentView.swift in Sources */,
 				26A3413F2B6D4EFF00761428 /* MainView.swift in Sources */,
 				1587FA562B9A27BD002BB78E /* NotificationsViewController.swift in Sources */,
-				155680462B7D2C20007B04D6 /* SceneDelegate.swift in Sources */,
-				155680432B7D1D1E007B04D6 /* NotificationReminder.swift in Sources */,
 				15C99BDA2B8CF16100E92310 /* ViewController.swift in Sources */,
 				264509662BBC64ED00F29EE3 /* SettingsView.swift in Sources */,
 				48DFD4242B6028A8009F140E /* EditAssignmentView.swift in Sources */,
 				48E236F22B9A30ED00FAB942 /* TestCalendar.swift in Sources */,
 				263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */,
-				15E136752B87AE7D00405CAA /* NotificationHandler.swift in Sources */,
 				AEAFEA3B2B35DE3A00478B36 /* AssignmentModel.swift in Sources */,
 				48A88A142B2234BE00C02351 /* PlannerAppApp.swift in Sources */,
 			);
