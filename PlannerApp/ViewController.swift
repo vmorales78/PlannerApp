@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         content.body = "Check assignments"
         content.interruptionLevel = .timeSensitive
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: true)
         
         let request = UNNotificationRequest(identifier: "time_sensitive", content: content, trigger: trigger)
         
@@ -59,8 +59,8 @@ class ViewController: UIViewController {
         let identifier = "my-notification"
         let title = "Reminder!"
         let body = "You have something in need of completion."
-        let hour = 11
-        let minute = 16
+        let hour = 14
+        let minute = 25
         let isDaily = false
         
         let notificationCenter = UNUserNotificationCenter.current()

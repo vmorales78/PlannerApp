@@ -11,9 +11,6 @@ import SwiftData
 struct MainView: View {
     @Environment(\.modelContext) var context
     @Query var assignments: [Assignment]
-    @State var upperDate: Date = Date.now.advanced(by: 100000)
-    @State var lowerDate: Date = Date.now
-    @State var showDateRange: Bool = false
     var body: some View {
         TabView {
             ContentView()
@@ -22,7 +19,7 @@ struct MainView: View {
                     
                 }
             
-            AssignmentCalendarView(upperDate: $upperDate, lowerDate: $lowerDate, calendarView: CustomCalendarView(lowerDate: $lowerDate, upperDate: $upperDate, showDateRange: $showDateRange))
+            AssignmentCalendarView()
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")
                 }
@@ -37,6 +34,9 @@ struct MainView: View {
 //  ADDS EXAMPLE DATA TO ASSIGNMENTS ARRAY - UNCOMMENT IF THE ARRAY NEEDS STUFF IN IT FOR TESTING
 //
 //        .onAppear {
+//            do {
+//                try context.delete(model: Assignment.self)
+//            } catch {}
 //            context.insert(Assignment(assignmentName: "Math Worksheet", assignmentType: "Homework", assignmentClass: "Math", startDate: Date.now, dueDate: Date.now.advanced(by: 345600)))
 //            context.insert(Assignment(assignmentName: "History Quiz", assignmentType: "Quiz", assignmentClass: "History", startDate: Date.now, dueDate: Date.now.advanced(by: 432000)))
 //            context.insert(Assignment(assignmentName: "Science Worksheet", assignmentType: "Homework", assignmentClass: "Science", startDate: Date.now, dueDate: Date.now.advanced(by: 86400)))
