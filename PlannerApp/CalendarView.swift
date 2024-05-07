@@ -15,18 +15,17 @@ struct AssignmentCalendarView: View {
     @State var currentClasses: [String] = []
     @State var endDate: Date = Date.now.advanced(by: 1)
     @State var startDate: Date = Date.now
-    @State var calendarView: Any = CustomCalendarView(startDate: Date.now, endDate: Date.now.advanced(by: 1))
+    @State var calendarView: CustomCalendarView = CustomCalendarView(startDate: Date.now, endDate: Date.now.advanced(by: 1))
     
     func setDates(start: Date, end: Date) {
         startDate = start
         endDate = end
-        calendarView = CustomCalendarView(startDate: start, endDate: end) as CustomCalendarView
+        calendarView = CustomCalendarView(startDate: start, endDate: end)
     }
     
     var body: some View {
         VStack {
-            calendarView as! View
-//                .padding()
+            calendarView
             
             Text("Started \(startDate) - Due \(endDate)")
             
