@@ -15,16 +15,19 @@ struct AssignmentCalendarView: View {
     @State var currentClasses: [String] = []
     @State var endDate: Date = Date.now.advanced(by: 1)
     @State var startDate: Date = Date.now
+    @State var calendarView: Any = CustomCalendarView(startDate: Date.now, endDate: Date.now.advanced(by: 1))
     
     func setDates(start: Date, end: Date) {
         startDate = start
         endDate = end
+        calendarView = CustomCalendarView(startDate: start, endDate: end) as CustomCalendarView
     }
     
     var body: some View {
         VStack {
-            CustomCalendarView(startDate: startDate, endDate: endDate)
-                .padding()
+            calendarView as! View
+//                .padding()
+            
             Text("Started \(startDate) - Due \(endDate)")
             
             Spacer()
@@ -64,8 +67,8 @@ struct AssignmentCalendarView: View {
 }
 
 struct CustomCalendarView: UIViewRepresentable {
-    var startDate: Date
-    var endDate: Date
+    @State var startDate: Date
+    @State var endDate: Date
     
     typealias UIViewType = CalendarView
     @State var selectedDay: DayComponents?
@@ -110,10 +113,14 @@ struct CustomCalendarView: UIViewRepresentable {
         .horizontalDayMargin(8)
         
     }
+    
+    func updateUIView(_ uiView: CalendarView, context: Context) {
+        
+    }
 }
 
 final class DayRangeIndicatorView: UIView {
-    private var indicatorColor: UIColor = .blue.withAlphaComponent(0.15)
+    private var indicatorColor: UIColor = UIColor(red: CGFloat.random(in: 0.0...1.0), green: CGFloat.random(in: 0.0...1.0), blue: CGFloat.random(in: 0.0...1.0), alpha: 0.15)
     
     init() {
         super.init(frame: .infinite)
