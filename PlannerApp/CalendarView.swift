@@ -13,15 +13,21 @@ import UIKit
 struct AssignmentCalendarView: View {
     @Query(sort: [SortDescriptor(\Assignment.assignmentClass), SortDescriptor(\Assignment.dueDate)]) var assignmentList: [Assignment]
     @State var currentClasses: [String] = []
-    @Binding var upperDate: Date
-    @Binding var lowerDate: Date
-    @State var showDateRange: Bool = false
-    @State var calendarView: CustomCalendarView
+    @State var endDate: Date = Date.now.advanced(by: 1)
+    @State var startDate: Date = Date.now
+    @State var calendarView: CustomCalendarView = CustomCalendarView(startDate: Date.now, endDate: Date.now.advanced(by: 1))
+    
+    func setDates(start: Date, end: Date) {
+        startDate = start
+        endDate = end
+        calendarView = CustomCalendarView(startDate: start, endDate: end)
+    }
     
     var body: some View {
         VStack {
             calendarView
-                .padding()
+            
+            Text("Started \(startDate) - Due \(endDate)")
             
             Spacer()
             
@@ -33,16 +39,15 @@ struct AssignmentCalendarView: View {
                             .font(.title)
                             .padding()
                         ForEach(assignmentList, id: \.self) { assignment in
-                            if(assignment.assignmentClass == className) {
-                                Button {
-                                    upperDate = assignment.startDate
-                                    lowerDate = assignment.dueDate
-                                    showDateRange = true
-                                } label: {
-                                    Text(assignment.assignmentName + " - Due " + assignment.dueDate.formatted())
-                                        .font(.title2)
+                            if(assignment.dueDate > Date.now) {
+                                if(assignment.assignmentClass == className) {
+                                    Button {
+                                        setDates(start: assignment.startDate, end: assignment.dueDate)
+                                    } label: {
+                                        Text(assignment.assignmentName + " - Due " + assignment.dueDate.formatted())
+                                            .font(.title2)
+                                    }
                                 }
-                                .padding()
                             }
                         }
                     }
@@ -50,14 +55,9 @@ struct AssignmentCalendarView: View {
             }
             .defaultScrollAnchor(.top)
         }
-        .onDisappear {
-            showDateRange = false
-        }
         .onAppear {
-            calendarView = CustomCalendarView(lowerDate: $lowerDate, upperDate: $upperDate, showDateRange: $showDateRange)
-            showDateRange = false
             for assignment in assignmentList {
-                if(!currentClasses.contains(assignment.assignmentClass)) {
+                if(!currentClasses.contains(assignment.assignmentClass) && assignment.dueDate > Date.now) {
                     currentClasses.append(assignment.assignmentClass)
                 }
             }
@@ -66,62 +66,46 @@ struct AssignmentCalendarView: View {
 }
 
 struct CustomCalendarView: UIViewRepresentable {
-    @Binding var lowerDate: Date
-    @Binding var upperDate: Date
-    @Binding var showDateRange: Bool
+    @State var startDate: Date
+    @State var endDate: Date
     
     typealias UIViewType = CalendarView
     @State var selectedDay: DayComponents?
-
+    
     func makeUIView(context: Context) -> CalendarView {
         let calendarView = CalendarView(initialContent: makeContent())
-        print("made UIView")
         calendarView.daySelectionHandler = { day in
-            print("running")
-            guard case self.selectedDay = day else {
-                return print("didnt work")}
-            if self.selectedDay == day {
-                print("worked")
-            }
+            guard case self.selectedDay = day else { return }
         }
-        
         return calendarView
-        
     }
     
     private func makeContent() -> CalendarViewContent {
         let calendar = Calendar.current
         
-        let startDate = calendar.date(from: DateComponents(year: 2023, month: 01, day: 01))!
-        let endDate = calendar.date(from: DateComponents(year: 2024, month: 12, day: 31))!
-        
-        let dateRangeToHighlight = lowerDate...upperDate
-        
         return CalendarViewContent (
             calendar: calendar,
-            visibleDateRange: startDate...endDate,
+            visibleDateRange: Date.now.advanced(by: -10000)...Date.now.advanced(by: 500000000),
             monthsLayout: .vertical(options: VerticalMonthsLayoutOptions()))
-        .dayRangeItemProvider(for: [dateRangeToHighlight]) { dayRangeLayoutContext in
-            DayRangeIndicatorView.calendarItemModel(
+        .dayRangeItemProvider(for: [startDate...endDate]) { context in
+            CalendarItemModel<DayRangeIndicatorView>(
                 invariantViewProperties: .init(),
-                content: .init(framesOfDaysToHighlight: dayRangeLayoutContext.daysAndFrames.map { $0.frame }))
+                content: .init(framesOfDaysToHighlight: context.daysAndFrames.map { $0.frame }))
         }
         .dayItemProvider { day in
             var invariantViewProperties = theDay.InvariantViewProperties(
-                   font: UIFont.systemFont(ofSize: 18),
-                   textColor: .darkGray,
-                   backgroundColor: .clear)
-
-                 if day == selectedDay {
-                   invariantViewProperties.textColor = .white
-                   invariantViewProperties.backgroundColor = .blue
-                     print("selected day")
-                 }
-//            print("returned day item")
-                 return theDay.calendarItemModel(
-                   invariantViewProperties: invariantViewProperties,
-                   content: .init(day: day))
-
+                font: UIFont.systemFont(ofSize: 18),
+                textColor: .darkGray,
+                backgroundColor: .clear)
+            
+            if day == selectedDay {
+                invariantViewProperties.textColor = .white
+                invariantViewProperties.backgroundColor = .blue
+            }
+            return theDay.calendarItemModel(
+                invariantViewProperties: invariantViewProperties,
+                content: .init(day: day))
+            
         }
         .interMonthSpacing(24)
         .verticalDayMargin(8)
@@ -135,10 +119,9 @@ struct CustomCalendarView: UIViewRepresentable {
 }
 
 final class DayRangeIndicatorView: UIView {
-    let color: UIColor
+    private var indicatorColor: UIColor = UIColor(red: CGFloat.random(in: 0.0...1.0), green: CGFloat.random(in: 0.0...1.0), blue: CGFloat.random(in: 0.0...1.0), alpha: 0.15)
     
-    init(color: UIColor) {
-        self.color = color
+    init() {
         super.init(frame: .infinite)
         backgroundColor = .clear
     }
@@ -154,7 +137,7 @@ final class DayRangeIndicatorView: UIView {
     
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-        context?.setFillColor(color.withAlphaComponent(0.15).cgColor)
+        context?.setFillColor(indicatorColor.cgColor)
         
         // Get frames of day rows in the range
         var dayRowFrames = [CGRect]()
@@ -179,11 +162,9 @@ final class DayRangeIndicatorView: UIView {
     
 }
 
-
 extension DayRangeIndicatorView: CalendarItemViewRepresentable {
     
     struct InvariantViewProperties: Hashable {
-        let indicatorColor = UIColor.blue.withAlphaComponent(0.15)
     }
     
     struct Content: Equatable {
@@ -191,9 +172,10 @@ extension DayRangeIndicatorView: CalendarItemViewRepresentable {
     }
     
     static func makeView(
-        withInvariantViewProperties invariantViewProperties: InvariantViewProperties) -> DayRangeIndicatorView
+        withInvariantViewProperties invariantViewProperties: InvariantViewProperties)
+    -> DayRangeIndicatorView
     {
-        DayRangeIndicatorView(color: UIColor(Color.accentColor))
+        DayRangeIndicatorView()
     }
     
     static func setContent(_ content: Content, on view: DayRangeIndicatorView) {
