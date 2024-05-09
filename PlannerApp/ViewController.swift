@@ -61,8 +61,8 @@ class ViewController: UIViewController {
         let identifier = "my-notification"
         let title = "Reminder!"
         let body = "You have something in need of completion."
-        let hour = 10
-        let minute = 56
+        let hour = 11
+        let minute = 10
         let isDaily = false
         
         let notificationCenter = UNUserNotificationCenter.current()
@@ -82,5 +82,22 @@ class ViewController: UIViewController {
         
         notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
         notificationCenter.add(request)
+    }
+    
+//    @IBAction func action(_ sender: Any) {
+//        let content = UNMutableNotificationContent()
+//        content.title = "Assignment!"
+//        content.subtitle = "You have something in need of completion."
+//        content.body = "Check your tasks."
+//        content.badge = 1
+//        
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+//        let request = UNNotificationRequest(identifier: "notifDone", content: content, trigger: trigger)
+//        
+//        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+//    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 }

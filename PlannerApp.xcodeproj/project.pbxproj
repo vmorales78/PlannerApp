@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		156EA3F22BED31CD004A07D3 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EA3F12BED31CD004A07D3 /* Control.swift */; };
+		156EA3F42BED3211004A07D3 /* TestContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EA3F32BED3211004A07D3 /* TestContentView.swift */; };
 		1587FA562B9A27BD002BB78E /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1587FA552B9A27BD002BB78E /* NotificationsViewController.swift */; };
 		15C99BDA2B8CF16100E92310 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C99BD92B8CF16000E92310 /* ViewController.swift */; };
 		263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E1F932B62C1B2003138D7 /* CalendarView.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		156EA3F12BED31CD004A07D3 /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		156EA3F32BED3211004A07D3 /* TestContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestContentView.swift; sourceTree = "<group>"; };
 		1587FA552B9A27BD002BB78E /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		15C99BD92B8CF16000E92310 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15CF10812BA4ABA100AC29BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -77,11 +81,13 @@
 				26A3413E2B6D4EFF00761428 /* MainView.swift */,
 				264509652BBC64ED00F29EE3 /* SettingsView.swift */,
 				48A88A152B2234BE00C02351 /* ContentView.swift */,
+				156EA3F32BED3211004A07D3 /* TestContentView.swift */,
 				263E1F932B62C1B2003138D7 /* CalendarView.swift */,
 				48DFD4232B6028A8009F140E /* EditAssignmentView.swift */,
 				AEAFEA3A2B35DE3A00478B36 /* AssignmentModel.swift */,
 				15C99BD92B8CF16000E92310 /* ViewController.swift */,
 				1587FA552B9A27BD002BB78E /* NotificationsViewController.swift */,
+				156EA3F12BED31CD004A07D3 /* Control.swift */,
 				48A88A172B2234C100C02351 /* Assets.xcassets */,
 				48A88A192B2234C100C02351 /* PlannerApp.entitlements */,
 				48A88A1A2B2234C200C02351 /* Preview Content */,
@@ -175,10 +181,12 @@
 			files = (
 				48A88A162B2234BE00C02351 /* ContentView.swift in Sources */,
 				26A3413F2B6D4EFF00761428 /* MainView.swift in Sources */,
+				156EA3F42BED3211004A07D3 /* TestContentView.swift in Sources */,
 				1587FA562B9A27BD002BB78E /* NotificationsViewController.swift in Sources */,
 				15C99BDA2B8CF16100E92310 /* ViewController.swift in Sources */,
 				264509662BBC64ED00F29EE3 /* SettingsView.swift in Sources */,
 				48DFD4242B6028A8009F140E /* EditAssignmentView.swift in Sources */,
+				156EA3F22BED31CD004A07D3 /* Control.swift in Sources */,
 				48E236F22B9A30ED00FAB942 /* TestCalendar.swift in Sources */,
 				263E1F942B62C1B2003138D7 /* CalendarView.swift in Sources */,
 				AEAFEA3B2B35DE3A00478B36 /* AssignmentModel.swift in Sources */,
